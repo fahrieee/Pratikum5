@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>KURS</title>
+        <style>
+            p{
+                width: 150px ;
+                text-align: center;
+            }
+            .input{
+                border-radius: 5px;
+                height: 25px;
+                border-color: green;
+            }
+            .container{
+              margin: auto;
+              width: 50%;
+              background-color: #2d7d8387;
+            }
+            .input2{
+                background-color: green;
+                font-weight: bold;
+                float: right;
+            }
+            table{
+                background-color: rgba(82, 168, 236, 0.8);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3 style="text-align: center;">Kurs Rupiah-Mata Uang Asing</h3>
+            <table Border="1" style="margin: auto;">
+               <tr>
+                <th>Masukan Nilai</th>
+                <th>Mata Uang</th>
+                <th>Rupiah</th>
+               </tr>
+               <tr>
+                   <td>
+                      <form name="form1" id="form1" class="form-control" onsubmit="return false">
+                          <input type="text" name="data" id="data" class="input" />
+                          
+                      </form>
+                   </td>
+                   <td>
+                       <form name="form2" id="form2" class="form-control" onsubmit="return false">
+                           <select name="kategori" id="kategori" class="form-control">
+                               <option value="1">US Dollar</option>
+                               <option value="2">Dollar Singapura</option>
+                               <option value="3">Ringgit Malaysia</option>
+                               <option value="4">Yen Jepang</option>
+                               <option value="5">Euro</option>
+                               <option value="6">Riyal Arab Saudi</option>
+                           </select>
+                           
+                       </form>
+                   </td>
+                   <td>
+                       <p id="tampil"><input type="hidden" name="" id="input" value="" /></p>
+               </tr>
+               <tr>
+                 <td colspan="3">
+                   <input type="button" onclick="hitung()" value="HITUNG" class="input2" />
+                 </td>
+               </tr>
+            </table>
+             
+        </div>
+        <script type="text/javascript" charset="utf-8">
+            function hitung()
+            {
+                let mata_uang = document.getElementById("form2").kategori.value;
+                let masukan = parseFloat(data.value);
+                
+                if (mata_uang =="1")
+                {
+                let hasil = masukan * 9.915;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (mata_uang =="2")
+                {
+                let hasil = masukan * 13.472;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (mata_uang =="3")
+                {
+                let hasil = masukan * 874;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (mata_uang =="4")
+                {
+                let hasil = masukan * 120;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (mata_uang =="5")
+                {
+                let hasil = masukan * 15.188;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (mata_uang =="6")
+                {
+                let hasil = masukan * 3.952;
+                document.getElementById("tampil").innerHTML =hasil;
+                }
+            }
+        </script>
+    </body>
+</html>
